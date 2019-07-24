@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<h3>Sign in </h3>
+<hr>
+<hr>
+<form method="post">
+
+    
+   
+  
+    {{ render_field(form.username) }}
+    {{ render_field(form.password) }}
+    
+  
+  <button class="btn btn-primary">
+  <span class="spinner-border spinner-border-sm"></span>
+ sign in
+</button>
+ 
+</form>
+
+{% endblock body %}

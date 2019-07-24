@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>article</h3>
+<hr>
+<hr>
+{% from "includes/formhelpers.html" import render_field %}
+
+
+<form method="post">
+
+    
+   
+  
+    {{ render_field(form.title,class="form-control") }}
+    {{ render_field(form.content,class="form-control") }}
+    
+  
+  <button class="btn btn-danger">
+  <span class="spinner-border spinner-border-sm"></span>
+publish
+</button>
+ 
+</form>
+
+{% endblock body %}

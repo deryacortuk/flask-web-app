@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{% if articles %}
+<form action="/search" method="post" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="Search">
+      <button class="btn btn-outline-danger my-2 my-0" type="submit">Search</button>
+    </form>
+    <hr>
+    <hr>
+<ul class="list-group">
+
+<li class="list-group-item"><h3>articles</h3></li>
+{% for article in  articles %}
+
+  <li class="list-group-item list-group-item-warning"><a href="article/{{article.id}}"> {{article.title}}   </a></li>
+
+  
+  
+{% endfor %}
+  
+ 
+</ul>
+{% else %}
+<div class= "alert alert-danger">article is not exists</div>
+{% endif %}
+{% endblock body %}
